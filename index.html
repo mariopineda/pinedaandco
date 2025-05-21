@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pineda & Co.</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500&family=Inter:wght@400;600&display=swap');
+
+    :root {
+      --bg: #121212;
+      --text: #dcd6cf;
+      --muted: #9e9b94;
+      --highlight: #1e1e1e;
+      --shadow: rgba(0, 0, 0, 0.4);
+
+      --goldsmithing-accent: #5f6f52;
+      --photography-accent: #44536b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      animation: fadeIn 1.5s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: 'Alegreya SC', serif;
+      font-size: 2.75rem;
+      color: var(--goldsmithing-accent);
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .link-columns {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    @media (min-width: 700px) {
+      .link-columns {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .link-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .link-button {
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: 0 4px 8px var(--shadow);
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      display: block;
+    }
+
+    .goldsmithing {
+      background-color: var(--highlight);
+      border: 2px solid var(--goldsmithing-accent);
+    }
+
+    .goldsmithing:hover {
+      background-color: var(--goldsmithing-accent);
+      color: var(--bg);
+      transform: translateY(-2px);
+    }
+
+    .photography {
+      background-color: var(--highlight);
+      border: 2px solid var(--photography-accent);
+    }
+
+    .photography:hover {
+      background-color: var(--photography-accent);
+      color: var(--bg);
+      transform: translateY(-2px);
+    }
+
+    .link-button h2 {
+      margin: 0;
+      font-family: 'Alegreya SC', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .link-button p {
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .social-bar {
+      width: 100%;
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--highlight);
+    }
+
+    .social-bar a {
+      margin: 0 1rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .social-bar a:hover {
+      color: var(--goldsmithing-accent);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pineda & Co.</h1>
+    <p>Craftsmanship, Wilderness, and the Pursuit of Mastery</p>
+  </header>
+
+  <div class="link-columns">
+    <div class="link-column">
+      <!-- Future URL: www.shop.pinedaandco.com -->
+      <a class="link-button goldsmithing" href="https://www.pinedaandco.com">
+        <h2>Fine Artisan Jewelry</h2>
+        <p>Handcrafted fine jewelry forged with fire, intention, and soul</p>
+      </a>
+      <a class="link-button goldsmithing" href="https://www.instagram.com/pinedaandco/">
+        <h2>Pineda & Co. Instagram</h2>
+        <p>Behind the scenes, inspiration, and process from the bench.</p>
+      </a>
+      <!-- Future URL: www.tac.pinedaandco.com -->
+      <a class="link-button goldsmithing" href="https://mariopineda.github.io/TheApprenticesChronicles/">
+        <h2>The Apprentice's Chronicles</h2>
+        <p>Documenting the slow mastery of goldsmithing – one hammer blow at a time.</p>
+      </a>
+    </div>
+    <div class="link-column">
+      <a class="link-button photography" href="https://www.instagram.com/mariopinedaphotography/">
+        <h2>Mario Pineda Photography</h2>
+        <p>Alberta-based nature photographer</p>
+      </a>
+      <a class="link-button photography" href="https://thebirdsarecalling.com/">
+        <h2>The Birds Are Calling</h2>
+        <p>Exploring more, one bird at a time</p>
+      </a>
+      <a class="link-button photography" href="https://www.instagram.com/frame.367/">
+        <h2>Frame 367</h2>
+        <p>Each frame a requiem for what just passed. In the afterglow of Project 366, the story goes on.</p>
+      </a>
+      <a class="link-button photography" href="https://project366.art/">
+        <h2>Project 366</h2>
+        <p>2024, 366 days, 366 black and white square photographs—one photo a day, shooting what it feels like rather than what it looks like.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="social-bar">
+    <a href="https://www.instagram.com/pinedaandco/" target="_blank">Jewelry Instagram</a>
+    <a href="https://www.instagram.com/mariopinedaphotography/" target="_blank">Photo Instagram</a>
+    <a href="mailto:hello@pinedaandco.com">Email</a>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 Pineda & Co. | Built with purpose and passion</p>
+  </div>
+</body>
+</html>
