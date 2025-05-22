@@ -79,12 +79,13 @@
       gap: 2rem;
       width: 100%;
       max-width: 900px;
+      align-items: flex-start;
     }
 
     @media (min-width: 700px) {
       .link-columns {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
       }
     }
 
@@ -93,6 +94,7 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      justify-content: space-between;
     }
 
     .link-button {
@@ -194,6 +196,19 @@
     pointer-events: none;
     z-index: 0;
   }
+.scroll-indicator {
+  animation: bounce 1.8s infinite;
+  font-size: 1.5rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
 </style>
 </head>
 <body>
@@ -201,6 +216,7 @@
     <h1>Pineda & Co.</h1>
     <p>Craftsmanship, Wilderness, and the Pursuit of Mastery</p>
   </header>
+  <div class="scroll-indicator">▼</div>
 
   <div class="link-columns">
     <div class="link-column">
